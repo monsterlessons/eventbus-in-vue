@@ -1,8 +1,17 @@
 <template>
   <div>
-    <h3>Alex</h3>
+    <h3>{{name}}</h3>
     <div>
-      This is our admin
+      {{description}}
+    </div>
+    <div>
+      {{isActive}}
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['name', 'description', 'isActive']
+}
+</script>
