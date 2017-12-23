@@ -8,6 +8,7 @@
       :is-active='user.isActive'
       :key='user.name'
     />
+    <my-user />
   </div>
 </template>
 

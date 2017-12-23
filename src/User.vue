@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>{{name}}</h3>
+    <h3>{{upperCasedName()}}</h3>
     <div>
       {{description}}
     </div>
@@ -12,6 +12,18 @@
 
 <script>
 export default {
-  props: ['name', 'description', 'isActive']
+  props: {
+    name: {
+      type: String,
+      default: 'Not set'
+    },
+    description: String,
+    isActive: Boolean
+  },
+  methods: {
+    upperCasedName () {
+      return this.name.toUpperCase()
+    }
+  }
 }
 </script>
