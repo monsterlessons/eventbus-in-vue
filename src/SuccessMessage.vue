@@ -3,7 +3,17 @@
 </template>
 
 <script>
+  import {eventBus} from './main'
   export default {
-    props: ['email']
+    data () {
+      return {
+        email: ''
+      }
+    },
+    created () {
+      eventBus.$on('login', data => {
+        this.email = data.email
+      })
+    }
   }
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>Hello Vue!</h1>
-    <loginForm :onLogin='onLogin' />
-    <successMessage :email='email' />
+    <loginForm/>
+    <successMessage/>
   </div>
 </template>
 
@@ -10,19 +10,9 @@
 import loginForm from './LoginForm.vue'
 import successMessage from './SuccessMessage.vue'
 export default {
-  data () {
-    return {
-      email: ''
-    }
-  },
   components: {
     loginForm,
     successMessage
-  },
-  methods: {
-    onLogin (data) {
-      this.email = data.email
-    }
   }
 }
 </script>
